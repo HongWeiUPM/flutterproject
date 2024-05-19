@@ -5,7 +5,7 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:4.1.0'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.24" // Update this line
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.10" // Update this line
         classpath 'com.google.gms:google-services:4.4.1'
     }
 }
