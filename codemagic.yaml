@@ -1,0 +1,19 @@
+workflows:
+  android-workflow:
+    name: Android Workflow
+    environment:
+      flutter: stable
+      vars:
+        FIREBASE_TOKEN: "$e00f6e327f3ca253263072d11b2ded3b78430931"
+    scripts:
+      - name: Install dependencies
+        script: |
+          flutter pub get
+      - name: Build APK
+        script: |
+          flutter build apk --release
+      - name: Distribute to Firebase App Distribution
+        script: |
+          firebase appdistribution:distribute build/app/outputs/flutter-apk/app-release.apk \
+            --app 1:147171804538:android:2896f91d6bca4f2ee102c3 \
+            --token $e00f6e327f3ca253263072d11b2ded3b78430931
