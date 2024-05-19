@@ -1,12 +1,12 @@
 buildscript {
+    ext.kotlin_version = '1.9.24'
     repositories {
-        ext.kotlin_version = '1.9.24'
         google()
         mavenCentral()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:4.1.0'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:ext.kotlin_version" // Update this line
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version" // Use string interpolation here
         classpath 'com.google.gms:google-services:4.4.1'
     }
 }
